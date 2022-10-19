@@ -1,36 +1,58 @@
 $(document).ready(function() {
 CucumberHTML.timelineItems.pushArray([
   {
-    "id": "4dae2d60-e434-4992-9390-68fec43bbe86",
-    "feature": "Login page feature",
-    "scenario": "Login with correct credentials",
-    "start": 1666094866290,
+    "id": "f52e5e09-74c1-4bf9-8402-ea5b95a63c63",
+    "feature": "Account Page Feature",
+    "scenario": "Accounts section count",
+    "start": 1666193238361,
     "group": 1,
     "content": "",
-    "tags": "",
-    "end": 1666094916086,
-    "className": "failed"
+    "tags": "@accounts,",
+    "end": 1666193268096,
+    "className": "passed"
   },
   {
-    "id": "688f3741-d1d3-4a8f-a608-b8c51d039e4b",
-    "feature": "Login page feature",
-    "scenario": "Forgot Password link",
-    "start": 1666094834958,
-    "group": 1,
-    "content": "",
-    "tags": "",
-    "end": 1666094866264,
-    "className": "failed"
-  },
-  {
-    "id": "a98fdf91-8fcf-4378-805f-20f85d931c89",
+    "id": "2b0d30aa-9e73-42b4-aeba-cf06589bc581",
     "feature": "Login page feature",
     "scenario": "Login page title",
-    "start": 1666094795372,
+    "start": 1666193268108,
     "group": 1,
     "content": "",
     "tags": "",
-    "end": 1666094834940,
+    "end": 1666193286257,
+    "className": "passed"
+  },
+  {
+    "id": "98155c77-7a79-4d38-8d60-b16f021e5e2c",
+    "feature": "Login page feature",
+    "scenario": "Login with correct credentials",
+    "start": 1666193300722,
+    "group": 1,
+    "content": "",
+    "tags": "",
+    "end": 1666193318432,
+    "className": "passed"
+  },
+  {
+    "id": "0ed6f806-82a0-4d4d-8289-dd939e6f1adf",
+    "feature": "Login page feature",
+    "scenario": "Forgot Password link",
+    "start": 1666193286310,
+    "group": 1,
+    "content": "",
+    "tags": "",
+    "end": 1666193300702,
+    "className": "failed"
+  },
+  {
+    "id": "abaf8108-e10b-47b7-a062-2674eda875d7",
+    "feature": "Account Page Feature",
+    "scenario": "Accounts page title",
+    "start": 1666193211367,
+    "group": 1,
+    "content": "",
+    "tags": "@accounts,",
+    "end": 1666193238338,
     "className": "passed"
   }
 ]);
