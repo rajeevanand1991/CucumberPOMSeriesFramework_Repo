@@ -6,7 +6,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-		features = {"src/test/resources/parallel"}, 
+		features = {"src/test/resources/parallel/ContactUs.feature"}, 
 		//features = {"src/test/resources/AppFeatures/AccountsPage.feature"}, //To run only AccountsPage.feature file
 		glue = {"parallel"},
 		plugin = {"pretty", 
