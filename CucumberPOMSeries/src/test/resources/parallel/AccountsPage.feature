@@ -11,6 +11,7 @@ Given user is on Accounts page
 When user gets the title of the page
 Then page title should be "My account - My Store"
 
+#@skip_scenario ===> @skip_scenario tag alone Should present to skip this scenarios and their logical code is added in our ApplicationHooks.java file
 @accounts
 Scenario: Accounts section count
 Given user is on Accounts page

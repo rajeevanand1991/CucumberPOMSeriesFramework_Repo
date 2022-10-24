@@ -2,6 +2,7 @@ package parallel;
 
 import java.util.Properties;
 
+import org.junit.Assume;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -20,13 +21,19 @@ public class ApplicationHooks {
 	private ConfigReader configReader;
 	Properties prop;
 
-	@Before(order = 0) //To read the config.properties
+	@Before (value = "@skip_scenario", order = 0)
+	public void skip_scenario(Scenario scenario) { //This method not execute the scenarios whichever is mentioned as @skip_scenario tag in the feature file and *** ONE CONDITION IS ***, should only present this @skip_scenario tag alone, if any tags additional present means it will not consider to skip that scenarios
+		System.out.println("SKIPPED SCENARIO is : " +scenario.getName());
+		Assume.assumeTrue(false);
+	}
+	
+	@Before(order = 1) //To read the config.properties
 	public void getProperty() {
 		configReader = new ConfigReader();
 		prop = configReader.init_prop();
 	}
 
-	@Before(order = 1)
+	@Before(order = 2)
 	public void launchBrowser() {
 		String browserName = prop.getProperty("browser");
 		driverFactory = new DriverFactory(); //creating DriverFactory object to call init_driver() method

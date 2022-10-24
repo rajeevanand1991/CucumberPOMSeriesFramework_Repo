@@ -6,10 +6,8 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-		features = {"src/test/resources/parallel"}, 
-		//features = {"src/test/resources/AppFeatures/AccountsPage.feature"}, //To run only AccountsPage.feature file
+		features = {"@target/failedrerun.txt"}, 
 		glue = {"parallel"},
-		//tags = "not @Skip", //This will not execute the scenarios whichever is mentioned as @skip_scenario tag in the feature file
 		plugin = {"pretty", 
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", 
 				"timeline:test-output-thread/",
@@ -17,7 +15,7 @@ import io.cucumber.testng.CucumberOptions;
 				}
 			)
 
-public class ParallelRun extends AbstractTestNGCucumberTests {
+public class FailedRun extends AbstractTestNGCucumberTests {
 	
 	@Override
 	@DataProvider(parallel = true)
